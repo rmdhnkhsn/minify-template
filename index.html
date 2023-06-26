@@ -6,14 +6,16 @@
         <link rel="stylesheet" href="css/font/poppins.css">
         <link rel="stylesheet" href="css/bootstrap-grid.min.css">
         <link rel="stylesheet" href="css/template.css">
-        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css">
+        <link rel="stylesheet" href="css/datatables/dt.css">
+        <link rel="stylesheet" href="css/fontawesome/all.min.css">
+        <!-- <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css"> -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
 <body>
     <nav class="navbar">
         <div class="nav-start">
             <div class="nav-toggle">
-                <i class="fa-duotone fa-bars"></i>
+                <i class="fa-solid fa-bars"></i>
             </div>
             <div class="nav-logo">
                 <img src="img/basys.png" alt="">
@@ -27,16 +29,19 @@
         <div class="nav-end">
             <div class="nav-account">
                 <div class="container-account">
+                    <div class="second-account">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </div>
                     <div class="account">
                         <div class="text">
                             <div class="name">Jack</div>
                             <div class="role">Administrator Basys</div>
                         </div>
-                        <i class="fa-duotone fa-circle-user"></i>
+                        <i class="fa-solid fa-circle-user"></i>
                     </div>
                     <div class="detail-account">
                         <div class="header">
-                            <i class="fa-duotone fa-circle-user"></i>
+                            <i class="fa-solid fa-circle-user"></i>
                             <div class="text">
                                 <div class="name">Jack</div>
                                 <div class="role">Administrator Basys</div>
@@ -44,15 +49,15 @@
                         </div>
                         <div class="feature">
                             <a href="">
-                                <i class="fa-duotone fa-unlock"></i>
+                                <i class="fa-solid fa-unlock"></i>
                                 <div class="feature-name">Ubah Password</div>
                             </a>
                             <a href="">
-                                <i class="fa-duotone fa-envelopes"></i>
+                                <i class="fa-solid fa-envelope-open-text"></i>
                                 <div class="feature-name">Konfigurasi Email</div>
                             </a>
                             <a href="">
-                                <i class="fa-duotone fa-right-from-bracket"></i>
+                                <i class="fa-solid fa-right-from-bracket"></i>
                                 <div class="feature-name">Logout</div>
                             </a>
                         </div>
@@ -68,7 +73,7 @@
             <li class="nav-menu menu-link">
                 <a href="#">
                     <div class="nav-icon">
-                        <i class="fa-duotone fa-chart-pie"></i>
+                        <i class="fa-solid fa-chart-pie"></i>
                     </div>
                     <span class="link_name">Dashboard</span>
                 </a>
@@ -76,7 +81,7 @@
             <li class="nav-menu menu-link">
                 <a href="#">
                     <div class="nav-icon">
-                        <i class="fa-duotone fa-users-gear"></i>
+                        <i class="fa-solid fa-users-gear"></i>
                     </div>
                     <span class="link_name">User Admin</span>
                 </a>
@@ -84,7 +89,7 @@
             <li class="nav-menu menu-link">
                 <a href="#">
                     <div class="nav-icon">
-                        <i class="fa-duotone fa-gear"></i>
+                        <i class="fa-solid fa-gear"></i>
                     </div>
                     <span class="link_name">Setting</span>
                 </a>
@@ -93,11 +98,11 @@
                 <div class="arrow-link">
                     <a href="#">
                         <div class="nav-icon">
-                            <i class="fa-duotone fa-layer-group"></i>
+                            <i class="fa-solid fa-layer-group"></i>
                         </div>
                         <div class="nav-name">
                             <div class="link_name">Category</div>
-                            <i class="fa-duotone fa-chevron-down arrow"></i>
+                            <i class="fa-solid fa-chevron-down arrow"></i>
                         </div>
                     </a>
                 </div>
@@ -117,11 +122,11 @@
                 <div class="arrow-link">
                     <a href="#">
                         <div class="nav-icon">
-                            <i class="fa-duotone fa-folder-bookmark"></i>
+                            <i class="fa-solid fa-book"></i>
                         </div>
                         <div class="nav-name">
                             <div class="link_name">Report</div>
-                            <i class="fa-duotone fa-chevron-down arrow"></i>
+                            <i class="fa-solid fa-chevron-down arrow"></i>
                         </div>
                     </a>
                 </div>
@@ -140,25 +145,224 @@
         </ul>
     </div>
     <section class="content">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam saepe suscipit neque soluta ipsa molestias. Autem dicta vel voluptatibus dolore nisi quae enim, vitae qui. Velit dolorum impedit nulla voluptatem facere eaque, officiis natus sapiente fugiat tenetur! Cumque maxime delectus blanditiis nostrum labore ratione nulla doloremque assumenda aliquid, consequuntur nam ad necessitatibus ea ipsa quidem, repellendus vitae? Repellendus esse eum sed facere culpa beatae eaque accusamus, nostrum, architecto optio assumenda nulla perspiciatis distinctio quae ex et veritatis itaque? Est et quae aliquam saepe molestiae quo laboriosam. Reprehenderit, dicta? Minima aut voluptas explicabo dignissimos, quae ipsam minus? Reiciendis inventore earum ipsum.
+        <div class="row">
+            <div class="col-12">
+                <div class="containerHead">
+                    <div class="title-tbl">Data Karyawan</div>
+                    <div class="containerRight">
+                        <div class="relative">
+                            <input type="text" data-kt-filter="search" class="form-control searchInput" placeholder="Cari..." />
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <button type="button" class="btn-round">
+                            <i class="fa-solid fa-plus"></i>
+                            Tambah
+                        </button>
+                        <button type="button" class="btn-circle btnRefresh">
+                            <i class="fa-solid fa-arrows-rotate"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam saepe suscipit neque soluta ipsa molestias. Autem dicta vel voluptatibus dolore nisi quae enim, vitae qui. Velit dolorum impedit nulla voluptatem facere eaque, officiis natus sapiente fugiat tenetur! Cumque maxime delectus blanditiis nostrum labore ratione nulla doloremque assumenda aliquid, consequuntur nam ad necessitatibus ea ipsa quidem, repellendus vitae? Repellendus esse eum sed facere culpa beatae eaque accusamus, nostrum, architecto optio assumenda nulla perspiciatis distinctio quae ex et veritatis itaque? Est et quae aliquam saepe molestiae quo laboriosam. Reprehenderit, dicta? Minima aut voluptas explicabo dignissimos, quae ipsam minus? Reiciendis inventore earum ipsum.
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam saepe suscipit neque soluta ipsa molestias. Autem dicta vel voluptatibus dolore nisi quae enim, vitae qui. Velit dolorum impedit nulla voluptatem facere eaque, officiis natus sapiente fugiat tenetur! Cumque maxime delectus blanditiis nostrum labore ratione nulla doloremque assumenda aliquid, consequuntur nam ad necessitatibus ea ipsa quidem, repellendus vitae? Repellendus esse eum sed facere culpa beatae eaque accusamus, nostrum, architecto optio assumenda nulla perspiciatis distinctio quae ex et veritatis itaque? Est et quae aliquam saepe molestiae quo laboriosam. Reprehenderit, dicta? Minima aut voluptas explicabo dignissimos, quae ipsam minus? Reiciendis inventore earum ipsum.
+            <div class="col-12">
+                <div class="containerTable">
+                    <table class="table" id="DTtable">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nama</th>
+                                <th>NIK</th>
+                                <th>Alamat</th>
+                                <th>No HP</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <!-- <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Alex</td>
+                                <td>32111323928293</td>
+                                <td>Bandung</td>
+                                <td>0898756576</td>
+                                <td>
+                                    <div class="tbl-aksi">
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody> -->
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Alex</td>
+                                <td>32111323928293</td>
+                                <td>Bandung</td>
+                                <td>0898756576</td>
+                                <td>
+                                    <div class="tbl-aksi">
+    
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Alex</td>
+                                <td>32111323928293</td>
+                                <td>Bandung</td>
+                                <td>0898756576</td>
+                                <td>
+                                    <div class="tbl-aksi">
+    
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Alex</td>
+                                <td>32111323928293</td>
+                                <td>Bandung</td>
+                                <td>0898756576</td>
+                                <td>
+                                    <div class="tbl-aksi">
+    
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Alex</td>
+                                <td>32111323928293</td>
+                                <td>Bandung</td>
+                                <td>0898756576</td>
+                                <td>
+                                    <div class="tbl-aksi">
+    
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Alex</td>
+                                <td>32111323928293</td>
+                                <td>Bandung</td>
+                                <td>0898756576</td>
+                                <td>
+                                    <div class="tbl-aksi">
+    
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Alex</td>
+                                <td>32111323928293</td>
+                                <td>Bandung</td>
+                                <td>0898756576</td>
+                                <td>
+                                    <div class="tbl-aksi">
+    
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Alex</td>
+                                <td>32111323928293</td>
+                                <td>Bandung</td>
+                                <td>0898756576</td>
+                                <td>
+                                    <div class="tbl-aksi">
+    
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Alex</td>
+                                <td>32111323928293</td>
+                                <td>Bandung</td>
+                                <td>0898756576</td>
+                                <td>
+                                    <div class="tbl-aksi">
+    
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Alex</td>
+                                <td>32111323928293</td>
+                                <td>Bandung</td>
+                                <td>0898756576</td>
+                                <td>
+                                    <div class="tbl-aksi">
+    
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Alex</td>
+                                <td>32111323928293</td>
+                                <td>Bandung</td>
+                                <td>0898756576</td>
+                                <td>
+                                    <div class="tbl-aksi">
+    
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Alex</td>
+                                <td>32111323928293</td>
+                                <td>Bandung</td>
+                                <td>0898756576</td>
+                                <td>
+                                    <div class="tbl-aksi">
+    
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Alex</td>
+                                <td>32111323928293</td>
+                                <td>Bandung</td>
+                                <td>0898756576</td>
+                                <td>
+                                    <div class="tbl-aksi">
+    
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </section>
-    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/datatables/dt.js"></script>
+    <script src="js/datatables/dt.init.js"></script>
     <script src="js/script.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#DTtable').DataTable({
+                aLengthMenu: [
+                    [5, 10, 25, 50, -1],
+                    [5, 10, 25, 50, "All"]
+                ],
+                processing: true,
+                pageLength: 5,
+                responsive: true,
+                bInfo: true,
+                language: {
+                    'lengthMenu': 'Sort _MENU_',
+                }
+            });
+        });
+    </script>
 </body>
 </html>
