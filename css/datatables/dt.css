@@ -273,6 +273,7 @@
   }
   .dataTables_wrapper {
     position: relative;
+    clear: both;
     width: 100%;
   }
   .dataTables_wrapper .dataTables_length {

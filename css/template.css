@@ -27,6 +27,86 @@
     background: #dedede;
 }
 
+.flex {
+    display: flex;
+}
+  
+.justify-center {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+  
+.justify-start {
+    display: flex !important;
+    justify-content: start !important;
+    align-items: center !important;
+}
+  
+.justify-end {
+    display: flex !important;
+    justify-content: end !important;
+    align-items: center !important;
+}
+  
+.justify-sb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.justify-sb-res {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+@media (max-width: 800px) {
+    .justify-sb-res {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+.gap-1 {
+    gap: 0.2rem;
+}
+  
+.gap-2 {
+    gap: 0.4rem;
+}
+  
+.gap-3 {
+    gap: 0.6rem;
+}
+  
+.gap-4 {
+    gap: 0.8rem;
+}
+  
+.gap-5 {
+    gap: 1rem;
+}
+  
+.gap-6 {
+    gap: 1.2rem;
+}
+  
+.gap-7 {
+    gap: 1.4rem;
+}
+  
+.gap-8 {
+    gap: 1.8rem;
+}
+  
+.gap-9 {
+    gap: 2rem;
+}
+  
+.gap-10 {
+    gap: 2.6rem;
+}
+
 .relative {
     position: relative;
 }
@@ -539,81 +619,6 @@ body {
     background: var(--white);
 }
 
-@media (min-width: 800px) {
-    .nav-account .container-account .second-account {
-        display: none;
-    }
-}
-@media (min-width: 600px) {
-    .hideBar {
-        display: none;
-    }
-    section {
-        position: relative;
-        min-height: 100vh;
-        left: 245px;
-        margin-top: 5.5rem;
-        width: calc(100% - 245px);
-        padding: 0 1.5rem 1rem 2.2rem;
-        transition: all 0.5s ease;
-    }
-    .sidebar.close ~ section {
-        left: 55px;
-        width: calc(100% - 55px);
-    }
-}
-@media (max-width: 800px) {
-    .nav-account .container-account .account {
-        display: none;
-    }
-}
-@media (max-width: 600px) {
-    .navbar .nav-logo img {
-        width: 36px;
-    }
-    .navbar .nav-title {
-        display: none;
-    }   
-    .navbar {
-        z-index: 99;
-        box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
-    }
-    .sidebar.close{
-        left: -100%;
-    }
-    .sidebar{
-        width: 260px;
-    }
-    .sidebar {
-        margin-top: 0;
-        z-index: 9999999;
-    }
-    .sidebar-backdrop {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(2px);
-        z-index: 999;
-    }
-    section {
-        padding: 5rem 1rem 1rem 1rem;
-    }
-    .sidebar.close ~ section {
-        left: 0;
-        width: 100%;
-    }
-    .containerHead {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
 .card {
     background: #fff;
     border: 1px solid #eee;
@@ -709,6 +714,86 @@ body {
     font-weight: 500;
     line-height: 24px;
     color: #3b3b3b;
+}
+
+@media (min-width: 800px) {
+    .nav-account .container-account .second-account {
+        display: none;
+    }
+}
+@media (min-width: 600px) {
+    .hideBar {
+        display: none;
+    }
+    section {
+        position: relative;
+        min-height: 100vh;
+        left: 245px;
+        margin-top: 5.5rem;
+        width: calc(100% - 245px);
+        padding: 0 1.5rem 1rem 2.2rem;
+        transition: all 0.5s ease;
+    }
+    .sidebar.close ~ section {
+        left: 55px;
+        width: calc(100% - 55px);
+    }
+}
+@media (max-width: 800px) {
+    .nav-account .container-account .account {
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+    .navbar .nav-logo img {
+        width: 36px;
+    }
+    .navbar .nav-title {
+        display: none;
+    }   
+    .navbar {
+        z-index: 99;
+        box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+    }
+    .sidebar.close{
+        left: -100%;
+    }
+    .sidebar{
+        width: 260px;
+    }
+    .sidebar {
+        margin-top: 0;
+        z-index: 9999999;
+    }
+    .sidebar-backdrop {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(2px);
+        z-index: 999;
+    }
+    section {
+        padding: 5rem 1rem 1rem 1rem;
+    }
+    .sidebar.close ~ section {
+        left: 0;
+        width: 100%;
+    }
+    .containerHead {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+@media (max-width: 450px) {
+    .containerRight {
+        flex-direction: column;
+    }
 }
 
 /* MODAL */
