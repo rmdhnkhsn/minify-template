@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <head>
+   <head>
         <meta charset="UTF-8">
         <title> Template</title>
         <link rel="stylesheet" href="css/font/poppins.css">
         <link rel="stylesheet" href="css/bootstrap-grid.min.css">
-        <link rel="stylesheet" href="css/template.css">
-        <link rel="stylesheet" href="css/datatables/dt.css">
+        <link rel="stylesheet" href="css/datatables/dt.min.css">
         <link rel="stylesheet" href="css/fontawesome/all.min.css">
-        <!-- <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css"> -->
+        <link rel="stylesheet" href="css/swal/sweetalert.min.css">
+        <link rel="stylesheet" href="css/template.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
 <body>
     <nav class="navbar">
         <div class="nav-start">
             <div class="nav-toggle">
-                <i class="fa-solid fa-bars"></i>
+                <i class="fa-duotone fa-bars"></i>
             </div>
             <div class="nav-logo">
                 <img src="img/basys.png" alt="">
@@ -30,18 +30,18 @@
             <div class="nav-account">
                 <div class="container-account">
                     <div class="second-account">
-                        <i class="fa-solid fa-circle-user"></i>
+                        <i class="fa-duotone fa-circle-user"></i>
                     </div>
                     <div class="account">
                         <div class="text">
                             <div class="name">Jack</div>
                             <div class="role">Administrator Basys</div>
                         </div>
-                        <i class="fa-solid fa-circle-user"></i>
+                        <i class="fa-duotone fa-circle-user"></i>
                     </div>
                     <div class="detail-account">
                         <div class="header">
-                            <i class="fa-solid fa-circle-user"></i>
+                            <i class="fa-duotone fa-circle-user"></i>
                             <div class="text">
                                 <div class="name">Jack</div>
                                 <div class="role">Administrator Basys</div>
@@ -49,15 +49,15 @@
                         </div>
                         <div class="feature">
                             <a href="">
-                                <i class="fa-solid fa-unlock"></i>
+                                <i class="fa-duotone fa-unlock"></i>
                                 <div class="feature-name">Ubah Password</div>
                             </a>
                             <a href="">
-                                <i class="fa-solid fa-envelope-open-text"></i>
+                                <i class="fa-duotone fa-envelope-open-text"></i>
                                 <div class="feature-name">Konfigurasi Email</div>
                             </a>
                             <a href="">
-                                <i class="fa-solid fa-right-from-bracket"></i>
+                                <i class="fa-duotone fa-right-from-bracket"></i>
                                 <div class="feature-name">Logout</div>
                             </a>
                         </div>
@@ -73,7 +73,7 @@
             <li class="nav-menu menu-link">
                 <a href="#">
                     <div class="nav-icon">
-                        <i class="fa-solid fa-chart-pie"></i>
+                        <i class="fa-duotone fa-chart-pie"></i>
                     </div>
                     <span class="link_name">Dashboard</span>
                 </a>
@@ -81,7 +81,7 @@
             <li class="nav-menu menu-link">
                 <a href="#">
                     <div class="nav-icon">
-                        <i class="fa-solid fa-users-gear"></i>
+                        <i class="fa-duotone fa-users-gear"></i>
                     </div>
                     <span class="link_name">User Admin</span>
                 </a>
@@ -89,7 +89,7 @@
             <li class="nav-menu menu-link">
                 <a href="#">
                     <div class="nav-icon">
-                        <i class="fa-solid fa-gear"></i>
+                        <i class="fa-duotone fa-gear"></i>
                     </div>
                     <span class="link_name">Setting</span>
                 </a>
@@ -98,23 +98,20 @@
                 <div class="arrow-link">
                     <a href="#">
                         <div class="nav-icon">
-                            <i class="fa-solid fa-layer-group"></i>
+                            <i class="fa-duotone fa-layer-group"></i>
                         </div>
                         <div class="nav-name">
                             <div class="link_name">Category</div>
-                            <i class="fa-solid fa-chevron-down arrow"></i>
+                            <i class="fa-duotone fa-chevron-down arrow"></i>
                         </div>
                     </a>
                 </div>
-                <ul class="sub-menu">
+                <ul class="submenu">
                     <li class="submenu-link">
-                        <a href="#">Category A</a>
+                        <a href="#"> Lorem ipsum dolor sit amet.</a>
                     </li>
                     <li class="submenu-link">
-                        <a href="#">Category B</a>
-                    </li>
-                    <li class="submenu-link">
-                        <a href="#">Category C</a>
+                        <a href="#"> Lorem ipsum.</a>
                     </li>
                 </ul>
             </li>
@@ -122,230 +119,204 @@
                 <div class="arrow-link">
                     <a href="#">
                         <div class="nav-icon">
-                            <i class="fa-solid fa-book"></i>
+                            <i class="fa-duotone fa-book"></i>
                         </div>
                         <div class="nav-name">
                             <div class="link_name">Report</div>
-                            <i class="fa-solid fa-chevron-down arrow"></i>
+                            <i class="fa-duotone fa-chevron-down arrow"></i>
                         </div>
                     </a>
                 </div>
-                <ul class="sub-menu">
+                <ul class="submenu">
                     <li class="submenu-link">
-                        <a href="#">Report A</a>
+                        <a href="#"> Lorem ipsum dolor sit amet.</a>
                     </li>
                     <li class="submenu-link">
-                        <a href="#">Report B</a>
-                    </li>
-                    <li class="submenu-link">
-                        <a href="#">Report C</a>
+                        <a href="#"> Lorem ipsum.</a>
                     </li>
                 </ul>
             </li>
         </ul>
     </div>
     <section class="content">
-        <div class="row">
-            <div class="col-12">
-                <div class="containerHead">
-                    <div class="title-tbl">Data Karyawan</div>
-                    <div class="containerRight">
-                        <div class="relative">
-                            <input type="text" data-kt-filter="search" class="form-control searchInput" placeholder="Cari..." />
-                            <i class="fa-solid fa-magnifying-glass"></i>
+        <div class="card p-4">
+            <div class="row">
+                <div class="col-12">
+                    <div class="containerHead">
+                        <div class="title-tbl">Data Karyawan</div>
+                        <div class="containerRight">
+                            <div class="relative">
+                                <input type="text" data-kt-filter="search" class="form-control searchInput" id="tableSearch" placeholder="Cari..." />
+                                <i class="fa-duotone fa-magnifying-glass"></i>
+                            </div>
+                            <button type="button" class="btn-round" data-bs-toggle="modal" data-bs-target="#myModal">
+                                <i class="fa-duotone fa-plus"></i>
+                                Tambah
+                            </button>
+                            <button type="button" class="btn-circle btnRefresh">
+                                <i class="fa-duotone fa-arrows-rotate"></i>
+                            </button>
                         </div>
-                        <button type="button" class="btn-round">
-                            <i class="fa-solid fa-plus"></i>
-                            Tambah
-                        </button>
-                        <button type="button" class="btn-circle btnRefresh">
-                            <i class="fa-solid fa-arrows-rotate"></i>
-                        </button>
                     </div>
                 </div>
-            </div>
-            <div class="col-12">
-                <div class="containerTable">
-                    <table class="table" id="DTtable">
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>Nama</th>
-                                <th>NIK</th>
-                                <th>Alamat</th>
-                                <th>No HP</th>
-                                <th>Aksi</th>
-                            </tr>
-                        </thead>
-                        <!-- <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Alex</td>
-                                <td>32111323928293</td>
-                                <td>Bandung</td>
-                                <td>0898756576</td>
-                                <td>
-                                    <div class="tbl-aksi">
-    
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody> -->
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Alex</td>
-                                <td>32111323928293</td>
-                                <td>Bandung</td>
-                                <td>0898756576</td>
-                                <td>
-                                    <div class="tbl-aksi">
-    
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Alex</td>
-                                <td>32111323928293</td>
-                                <td>Bandung</td>
-                                <td>0898756576</td>
-                                <td>
-                                    <div class="tbl-aksi">
-    
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Alex</td>
-                                <td>32111323928293</td>
-                                <td>Bandung</td>
-                                <td>0898756576</td>
-                                <td>
-                                    <div class="tbl-aksi">
-    
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Alex</td>
-                                <td>32111323928293</td>
-                                <td>Bandung</td>
-                                <td>0898756576</td>
-                                <td>
-                                    <div class="tbl-aksi">
-    
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Alex</td>
-                                <td>32111323928293</td>
-                                <td>Bandung</td>
-                                <td>0898756576</td>
-                                <td>
-                                    <div class="tbl-aksi">
-    
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Alex</td>
-                                <td>32111323928293</td>
-                                <td>Bandung</td>
-                                <td>0898756576</td>
-                                <td>
-                                    <div class="tbl-aksi">
-    
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Alex</td>
-                                <td>32111323928293</td>
-                                <td>Bandung</td>
-                                <td>0898756576</td>
-                                <td>
-                                    <div class="tbl-aksi">
-    
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Alex</td>
-                                <td>32111323928293</td>
-                                <td>Bandung</td>
-                                <td>0898756576</td>
-                                <td>
-                                    <div class="tbl-aksi">
-    
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Alex</td>
-                                <td>32111323928293</td>
-                                <td>Bandung</td>
-                                <td>0898756576</td>
-                                <td>
-                                    <div class="tbl-aksi">
-    
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Alex</td>
-                                <td>32111323928293</td>
-                                <td>Bandung</td>
-                                <td>0898756576</td>
-                                <td>
-                                    <div class="tbl-aksi">
-    
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Alex</td>
-                                <td>32111323928293</td>
-                                <td>Bandung</td>
-                                <td>0898756576</td>
-                                <td>
-                                    <div class="tbl-aksi">
-    
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Alex</td>
-                                <td>32111323928293</td>
-                                <td>Bandung</td>
-                                <td>0898756576</td>
-                                <td>
-                                    <div class="tbl-aksi">
-    
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="col-12">
+                    <div class="containerTable">
+                        <table class="table" id="DTtable">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Nama</th>
+                                    <th>NIK</th>
+                                    <th>Alamat</th>
+                                    <th>No HP</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Alex</td>
+                                    <td>32111323928293</td>
+                                    <td>Bandung</td>
+                                    <td>0898756576</td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button type="button" class="btn-circle" data-bs-toggle="dropdown">
+                                                <i class="fa-duotone fa-gear fa-1vx"></i>
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <button class="dropdown-item">
+                                                    <i class="fa-duotone fa-memo-circle-info fa-1x"></i>Detail
+                                                </button>
+                                                <button class="dropdown-item">
+                                                    <i class="fa-duotone fa-pencil fa-1x"></i>Edit
+                                                </button>
+                                                <button class="dropdown-item" onclick="deleteFunction()">
+                                                    <i class="fa-duotone fa-trash-can fa-1x"></i>Delete
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Jhon</td>
+                                    <td>32111323928293</td>
+                                    <td>Bandung</td>
+                                    <td>0898756576</td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button type="button" class="btn-circle" data-bs-toggle="dropdown">
+                                                <i class="fa-duotone fa-gear fa-1vx"></i>
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <button class="dropdown-item">
+                                                    <i class="fa-duotone fa-memo-circle-info fa-1x"></i>Detail
+                                                </button>
+                                                <button class="dropdown-item">
+                                                    <i class="fa-duotone fa-pencil fa-1x"></i>Edit
+                                                </button>
+                                                <button class="dropdown-item" onclick="deleteFunction()">
+                                                    <i class="fa-duotone fa-trash-can fa-1x"></i>Delete
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Jack</td>
+                                    <td>32111323928293</td>
+                                    <td>Bandung</td>
+                                    <td>0898756576</td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button type="button" class="btn-circle" data-bs-toggle="dropdown">
+                                                <i class="fa-duotone fa-gear fa-1vx"></i>
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <button class="dropdown-item">
+                                                    <i class="fa-duotone fa-memo-circle-info fa-1x"></i>Detail
+                                                </button>
+                                                <button class="dropdown-item">
+                                                    <i class="fa-duotone fa-pencil fa-1x"></i>Edit
+                                                </button>
+                                                <button class="dropdown-item" onclick="deleteFunction()">
+                                                    <i class="fa-duotone fa-trash-can fa-1x"></i>Delete
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- MODAL -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="title">
+                        <div class="modal-title">Modal Title</div>
+                        <div class="modal-subtitle">Modal Subtitle</div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                        <i class="fa-duotone fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="label-form">Name</div>
+                            <input type="text" class="form-control mb-4" placeholder="Input name...">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="label-form">NIK</div>
+                            <input type="text" class="form-control mb-4" placeholder="Input nik...">
+                        </div>
+                        <div class="col-12">
+                            <div class="title mb-3">Floating Input</div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="floating-label-content">
+                                <input type="text" class="form-control borderInput floating-input" name="" id="norek" placeholder=" ">
+                                <label class="floating-label" for="norek">No Rek</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="floating-label-content">
+                                <input type="text" class="form-control borderInput floating-input" name="" id="telp" placeholder=" ">
+                                <label class="floating-label" for="telp">No Telp</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="floating-label-content">
+                                <textarea class="form-control borderInput floating-input" name="" id="address" placeholder=" "></textarea>
+                                <label class="floating-label" for="address">Address</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="modal-action">
+                                <button type="button" data-bs-dismiss="modal" class="btn-round-lg bg-silver"><i class="fa-duotone fa-ban"></i>Cancel</button>
+                                <button type="button" class="btn-round-lg bg-blue"><i class="fa-duotone fa-download"></i>Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="js/jquery-1.9.1.min.js"></script>
     <script src="js/datatables/dt.js"></script>
-    <script src="js/datatables/dt.init.js"></script>
+    <script src="js/bootstrap-5.3.2.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/swal/sweetalert.min.js"></script>
 
     <script>
         $(document).ready(function() {
@@ -362,7 +333,31 @@
                     'lengthMenu': 'Sort _MENU_',
                 }
             });
+
         });
+        
+        function deleteFunction() {
+            event.preventDefault();
+            var form = event.target.form;
+            swal({
+                title: "Apakah Anda Yakin?",
+                text: "Data yang dihapus tidak bisa dipulihkan !",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#2e93ff",
+                confirmButtonText: "Yes",
+                cancelButtonText: "No ",
+                closeOnConfirm: false,
+                closeOnCancel: false
+            },
+            function(isConfirm){
+                if (isConfirm) {
+                    form.submit();
+                } else {
+                    swal("Batal", "Data Anda Kembali Aman", "error");
+                }
+            }); 
+        }
     </script>
 </body>
 </html>

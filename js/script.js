@@ -1,10 +1,3 @@
-let arrow = document.querySelectorAll(".arrow-link");
-for (var i = 0; i < arrow.length; i++) {
-  arrow[i].addEventListener("click", (e)=>{
-    let arrowParent = e.target.parentElement.parentElement.parentElement.parentElement;
-    arrowParent.classList.toggle("showMenu");
-  });
-}
 
 let sidebar = document.querySelector(".sidebar");
 let sidebarBtn = document.querySelector(".nav-toggle .fa-bars");
@@ -41,3 +34,28 @@ $(".menu-link").on("click", function(){
     $(".menu-link").removeClass("active");
   });
 });
+
+// ACCORDION SIDE BAR
+let accHeading = document.querySelectorAll(".arrow-link");
+let accPanel = document.querySelectorAll(".submenu");
+
+for (let i = 0; i < accHeading.length; i++) {
+    accHeading[i].onclick = function() {
+        if (this.nextElementSibling.style.maxHeight) {
+           hidePanels();
+        } else {
+           showPanel(this);
+        } 
+    };
+}
+function showPanel(elem) {
+  hidePanels();
+  elem.classList.add("active");
+  elem.nextElementSibling.style.maxHeight = elem.nextElementSibling.scrollHeight + "px";
+}
+function hidePanels() {
+  for (let i = 0; i < accPanel.length; i++) {
+      accPanel[i].style.maxHeight = null;
+      accHeading[i].classList.remove("active");
+  }
+}
