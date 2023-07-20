@@ -5,9 +5,7 @@
         <title> Template</title>
         <link rel="stylesheet" href="css/font/poppins.css">
         <link rel="stylesheet" href="css/bootstrap-grid.min.css">
-        <link rel="stylesheet" href="css/datatables/dt.min.css">
-        <link rel="stylesheet" href="css/fontawesome/all.min.css">
-        <link rel="stylesheet" href="css/swal/sweetalert.min.css">
+        <link rel="stylesheet" href="css/icon/boxicon/boxicon.min.css">
         <link rel="stylesheet" href="css/template.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
@@ -15,7 +13,7 @@
     <nav class="navbar">
         <div class="nav-start">
             <div class="nav-toggle">
-                <i class="fa-duotone fa-bars"></i>
+                <i class="bx bx-menu"></i>
             </div>
             <div class="nav-logo">
                 <img src="img/basys.png" alt="">
@@ -30,50 +28,43 @@
             <div class="nav-account">
                 <div class="container-account">
                     <div class="second-account">
-                        <i class="fa-duotone fa-circle-user"></i>
+                        <i class='bx bxs-user-circle fs-2'></i>
                     </div>
                     <div class="account">
                         <div class="text">
                             <div class="name">Jack</div>
                             <div class="role">Administrator Basys</div>
                         </div>
-                        <i class="fa-duotone fa-circle-user"></i>
+                        <i class='bx bxs-user-circle fs-2'></i>
                     </div>
                     <div class="detail-account">
                         <div class="header">
-                            <i class="fa-duotone fa-circle-user"></i>
+                            <i class='bx bxs-user-circle fs-2'></i>
                             <div class="text">
                                 <div class="name">Jack</div>
                                 <div class="role">Administrator Basys</div>
                             </div>
                         </div>
                         <div class="feature">
-                            <a href="">
-                                <i class="fa-duotone fa-unlock"></i>
-                                <div class="feature-name">Ubah Password</div>
-                            </a>
-                            <a href="">
-                                <i class="fa-duotone fa-envelope-open-text"></i>
-                                <div class="feature-name">Konfigurasi Email</div>
-                            </a>
-                            <a href="">
-                                <i class="fa-duotone fa-right-from-bracket"></i>
-                                <div class="feature-name">Logout</div>
-                            </a>
+                            <a href="">Ubah Password</a>
+                            <a href="">Konfigurasi Email</a>
+                            <a href="">Sign Out</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
-    <div id="backdrop"></div>
+    <div id="backdrop" class="">
+        <button class="hideBar"></button>
+    </div>
     <div class="sidebar close">
+        <img src="img/bg-sidebar.jpg" class="bg-sidebar">
         <ul class="nav-links">
-            <button class="hideBar"></button>
             <li class="nav-menu menu-link">
                 <a href="#">
                     <div class="nav-icon">
-                        <i class="fa-duotone fa-chart-pie"></i>
+                        <i class='bx bxs-pie-chart-alt-2'></i>
                     </div>
                     <span class="link_name">Dashboard</span>
                 </a>
@@ -81,28 +72,20 @@
             <li class="nav-menu menu-link">
                 <a href="#">
                     <div class="nav-icon">
-                        <i class="fa-duotone fa-users-gear"></i>
+                        <i class='bx bx-table'></i>
                     </div>
-                    <span class="link_name">User Admin</span>
-                </a>
-            </li>
-            <li class="nav-menu menu-link">
-                <a href="#">
-                    <div class="nav-icon">
-                        <i class="fa-duotone fa-gear"></i>
-                    </div>
-                    <span class="link_name">Setting</span>
+                    <span class="link_name">Table</span>
                 </a>
             </li>
             <li class="nav-menu menu-down">
                 <div class="arrow-link">
                     <a href="#">
                         <div class="nav-icon">
-                            <i class="fa-duotone fa-layer-group"></i>
+                            <i class='bx bxs-layer'></i>
                         </div>
                         <div class="nav-name">
                             <div class="link_name">Category</div>
-                            <i class="fa-duotone fa-chevron-down arrow"></i>
+                            <i class='bx bxs-chevron-down arrow'></i>
                         </div>
                     </a>
                 </div>
@@ -119,11 +102,11 @@
                 <div class="arrow-link">
                     <a href="#">
                         <div class="nav-icon">
-                            <i class="fa-duotone fa-book"></i>
+                            <i class='bx bxs-book'></i>
                         </div>
                         <div class="nav-name">
                             <div class="link_name">Report</div>
-                            <i class="fa-duotone fa-chevron-down arrow"></i>
+                            <i class='bx bxs-chevron-down arrow'></i>
                         </div>
                     </a>
                 </div>
@@ -139,226 +122,193 @@
         </ul>
     </div>
     <section class="content">
-        <div class="card p-4">
-            <div class="row">
-                <div class="col-12">
-                    <div class="containerHead">
-                        <div class="title-tbl">Data Karyawan</div>
-                        <div class="containerRight">
-                            <div class="relative">
-                                <input type="text" data-kt-filter="search" class="form-control searchInput" id="tableSearch" placeholder="Cari..." />
-                                <i class="fa-duotone fa-magnifying-glass"></i>
-                            </div>
-                            <div class="justify-start gap-3">
-                                <button type="button" class="btn-round" data-bs-toggle="modal" data-bs-target="#myModal">
-                                    <i class="fa-duotone fa-plus"></i>
-                                    Tambah
-                                </button>
-                                <button type="button" class="btn-circle btnRefresh">
-                                    <i class="fa-duotone fa-arrows-rotate"></i>
-                                </button>
-                            </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="fs-6 mb-4 fw-bold text-muted">Tanggal</div>
+                <input class="form-control form-control-solid" placeholder="Pick date rage" id="kt_daterangepicker_4" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card p-4">
+                    <div class="card-header">
+                        <i class='bx bx-line-chart'></i>
+                        <div class="text">
+                            <div class="title">Grafik Transaksi Perbulan</div>
+                            <div class="subtitle">Data Grafik Transaksi Perbulan</div>
                         </div>
                     </div>
+                    <div id="chart"></div>
                 </div>
-                <div class="col-12">
-                    <div class="containerTable">
-                        <table class="table" id="DTtable">
-                            <thead>
-                                <tr>
-                                    <th>No</th>
-                                    <th>Nama</th>
-                                    <th>NIK</th>
-                                    <th>Alamat</th>
-                                    <th>No HP</th>
-                                    <th>Aksi</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Alex</td>
-                                    <td>32111323928293</td>
-                                    <td>Bandung</td>
-                                    <td>0898756576</td>
-                                    <td>
-                                        <div class="dropdown">
-                                            <button type="button" class="btn-circle" data-bs-toggle="dropdown">
-                                                <i class="fa-duotone fa-gear fa-1vx"></i>
-                                            </button>
-                                            <div class="dropdown-menu">
-                                                <button class="dropdown-item">
-                                                    <i class="fa-duotone fa-memo-circle-info fa-1x"></i>Detail
-                                                </button>
-                                                <button class="dropdown-item">
-                                                    <i class="fa-duotone fa-pencil fa-1x"></i>Edit
-                                                </button>
-                                                <button class="dropdown-item" onclick="deleteFunction()">
-                                                    <i class="fa-duotone fa-trash-can fa-1x"></i>Delete
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Jhon</td>
-                                    <td>32111323928293</td>
-                                    <td>Bandung</td>
-                                    <td>0898756576</td>
-                                    <td>
-                                        <div class="dropdown">
-                                            <button type="button" class="btn-circle" data-bs-toggle="dropdown">
-                                                <i class="fa-duotone fa-gear fa-1vx"></i>
-                                            </button>
-                                            <div class="dropdown-menu">
-                                                <button class="dropdown-item">
-                                                    <i class="fa-duotone fa-memo-circle-info fa-1x"></i>Detail
-                                                </button>
-                                                <button class="dropdown-item">
-                                                    <i class="fa-duotone fa-pencil fa-1x"></i>Edit
-                                                </button>
-                                                <button class="dropdown-item" onclick="deleteFunction()">
-                                                    <i class="fa-duotone fa-trash-can fa-1x"></i>Delete
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Jack</td>
-                                    <td>32111323928293</td>
-                                    <td>Bandung</td>
-                                    <td>0898756576</td>
-                                    <td>
-                                        <div class="dropdown">
-                                            <button type="button" class="btn-circle" data-bs-toggle="dropdown">
-                                                <i class="fa-duotone fa-gear fa-1vx"></i>
-                                            </button>
-                                            <div class="dropdown-menu">
-                                                <button class="dropdown-item">
-                                                    <i class="fa-duotone fa-memo-circle-info fa-1x"></i>Detail
-                                                </button>
-                                                <button class="dropdown-item">
-                                                    <i class="fa-duotone fa-pencil fa-1x"></i>Edit
-                                                </button>
-                                                <button class="dropdown-item" onclick="deleteFunction()">
-                                                    <i class="fa-duotone fa-trash-can fa-1x"></i>Delete
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-4">
+                    <div class="outlet-list">
+                        <div class="list-header">
+                            <i class='bx bx-store'></i>
+                            <div class="title">
+                                <div class="list-title">Jenis Transaksi Terlaris</div>
+                                <div class="list-subtitle">Barang terjual terbanyak pada semua outlet</div>
+                            </div>
+                        </div>
+                        <ul class="list-content">
+                            <li class="product">
+                                <div class="justify-start gap-4">
+                                    <i class='bx bx-shopping-bag'></i>
+                                    <div class="name">Sneakers</div>
+                                </div>
+                                <div class="total-price">
+                                    <span>Rp. </span>20.450.000
+                                </div>
+                            </li>
+                            <li class="product">
+                                <div class="justify-start gap-4">
+                                    <i class='bx bx-shopping-bag'></i>
+                                    <div class="name">Jacket</div>
+                                </div>
+                                <div class="total-price">
+                                    <span>Rp. </span>14.120.000
+                                </div>
+                            </li>
+                            <li class="product">
+                                <div class="justify-start gap-4">
+                                    <i class='bx bx-shopping-bag'></i>
+                                    <div class="name">T-shirt</div>
+                                </div>
+                                <div class="total-price">
+                                    <span>Rp. </span>10.820.000
+                                </div>
+                            </li>
+                            <li class="product">
+                                <div class="justify-start gap-4">
+                                    <i class='bx bx-shopping-bag'></i>
+                                    <div class="name">Jeans</div>
+                                </div>
+                                <div class="total-price">
+                                    <span>Rp. </span>5.349.000
+                                </div>
+                            </li>
+                            <li class="product">
+                                <div class="justify-start gap-4">
+                                    <i class='bx bx-shopping-bag'></i>
+                                    <div class="name">Shocks</div>
+                                </div>
+                                <div class="total-price">
+                                    <span>Rp. </span>2.349.000
+                                </div>
+                            </li>
+                            <li class="product">
+                                <div class="justify-start gap-4">
+                                    <i class='bx bx-shopping-bag'></i>
+                                    <div class="name">Manset</div>
+                                </div>
+                                <div class="total-price">
+                                    <span>Rp. </span>2.200.000
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- MODAL -->
-    <div class="modal fade" id="myModal">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="title">
-                        <div class="modal-title">Modal Title</div>
-                        <div class="modal-subtitle">Modal Subtitle</div>
-                    </div>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal">
-                        <i class="fa-duotone fa-times"></i>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="label-form">Name</div>
-                            <input type="text" class="form-control mb-4" placeholder="Input name...">
-                        </div>
-                        <div class="col-md-6">
-                            <div class="label-form">NIK</div>
-                            <input type="text" class="form-control mb-4" placeholder="Input nik...">
-                        </div>
-                        <div class="col-12">
-                            <div class="title mb-3">Floating Input</div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="floating-label-content">
-                                <input type="text" class="form-control borderInput floating-input" name="" id="norek" placeholder=" ">
-                                <label class="floating-label" for="norek">No Rek</label>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="floating-label-content">
-                                <input type="text" class="form-control borderInput floating-input" name="" id="telp" placeholder=" ">
-                                <label class="floating-label" for="telp">No Telp</label>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="floating-label-content">
-                                <textarea class="form-control borderInput floating-input" name="" id="address" placeholder=" "></textarea>
-                                <label class="floating-label" for="address">Address</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="modal-action">
-                                <button type="button" data-bs-dismiss="modal" class="btn-round-lg bg-silver"><i class="fa-duotone fa-ban"></i>Cancel</button>
-                                <button type="button" class="btn-round-lg bg-blue"><i class="fa-duotone fa-download"></i>Save</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <script src="js/jquery-1.9.1.min.js"></script>
-    <script src="js/datatables/dt.js"></script>
     <script src="js/bootstrap-5.3.2.min.js"></script>
+    <script src="js/apexchart.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/swal/sweetalert.min.js"></script>
 
     <script>
-        $(document).ready(function() {
-            $('#DTtable').DataTable({
-                aLengthMenu: [
-                    [5, 10, 25, 50, -1],
-                    [5, 10, 25, 50, "All"]
-                ],
-                processing: true,
-                pageLength: 5,
-                responsive: true,
-                bInfo: true,
-                language: {
-                    'lengthMenu': 'Sort _MENU_',
-                }
+        var chartInit;
+    
+        $(document).ready(function () {
+            initChart('chart')
+    
+            $('#filter').select2({
+                placeholder: "Pilih"
             });
-
-        });
+        })
+    
         
-        function deleteFunction() {
-            event.preventDefault();
-            var form = event.target.form;
-            swal({
-                title: "Apakah Anda Yakin?",
-                text: "Data yang dihapus tidak bisa dipulihkan !",
-                type: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#2e93ff",
-                confirmButtonText: "Yes",
-                cancelButtonText: "No ",
-                closeOnConfirm: false,
-                closeOnCancel: false
-            },
-            function(isConfirm){
-                if (isConfirm) {
-                    form.submit();
-                } else {
-                    swal("Batal", "Data Anda Kembali Aman", "error");
+        function initDate() {
+            var start = moment();
+            var end = moment();
+    
+            function cb(start, end) {
+                setStartDate =  start.format('DD-MM-YYYY');
+                setEndDate = end.format('DD-MM-YYYY');
+                
+                get_dashboard()
+                // console.log('New date range selected: ' + start.format('DD-MM-YYYY') + ' to ' + end.format('DD-MM-YYYY'));
+                $("#kt_daterangepicker_4").val(start.format('DD MMM YYYY') + ' - ' + end.format('DD MMM YYYY'));
+            
+            }
+    
+            $("#kt_daterangepicker_4").daterangepicker({
+                startDate: start,
+                endDate: end,
+                locale: {
+                format: 'DD MMM YYYY'
+                },
+                ranges: {
+                "Hari Ini": [moment(), moment()],
+                "Kemarin": [moment().subtract(1, "days"), moment().subtract(1, "days")],
+                "7 Hari Terakhir": [moment().subtract(6, "days"), moment()],
+                "30 Hari Terakhir": [moment().subtract(29, "days"), moment()],
+                "Bulan Ini": [moment().startOf("month"), moment().endOf("month")],
+                "Bulan Lalu": [moment().subtract(1, "month").startOf("month"), moment().subtract(1, "month").endOf("month")],
+                "Tahun Ini": [moment().startOf("year"), moment().endOf("year")],
+                "Tahun Lalu":  [moment().subtract(1, "year").startOf("year"), moment().subtract(1, "year").endOf("year")],
                 }
-            }); 
+            }, cb);
+    
+            cb(start, end);
+        }
+    
+        
+    
+        function initChart(type) {
+    
+            var catSet = [];
+            switch (type) {
+                case 'chart':
+                    catSet = ['Jan','Feb','Mar','Apr','Mei','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+                break;
+            }
+    
+            var options = {
+                chart: {
+                    height: 300,
+                    type: "area"
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                series: [
+                    {
+                        name: "Transaksi",
+                        data: [20,30,40,50,60,70,80,50,60,70,80,100]
+                    },
+                ],
+                fill: {
+                    type: "gradient",
+                    gradient: {
+                    shadeIntensity: 1,
+                    opacityFrom: 0.7,
+                    opacityTo: 0.9,
+                    stops: [0, 90, 100]
+                    }
+                },
+                xaxis: {
+                    categories: catSet
+                }
+            };
+    
+            switch (type) {
+                case 'chart':
+                    chartInit = new ApexCharts(document.querySelector("#chart"), options);
+                    chartInit.render();
+                break;
+            }
         }
     </script>
 </body>

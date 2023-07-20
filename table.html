@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <meta charset="UTF-8">
+        <title> Template</title>
+        <link rel="stylesheet" href="css/font/poppins.css">
+        <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+        <link rel="stylesheet" href="css/datatables/dt.css">
+        <link rel="stylesheet" href="css/icon/boxicon/boxicon.min.css">
+        <link rel="stylesheet" href="css/template.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+    <nav class="navbar">
+        <div class="nav-start">
+            <div class="nav-toggle">
+                <i class="bx bx-menu"></i>
+            </div>
+            <div class="nav-logo">
+                <img src="img/basys.png" alt="">
+                <div class="version">v1.4</div>
+            </div>
+            <div class="nav-title">
+                <div class="title">Employee</div>
+                <div class="sub-title">Data Employee</div>
+            </div>
+        </div>
+        <div class="nav-end">
+            <div class="nav-account">
+                <div class="container-account">
+                    <div class="second-account">
+                        <i class='bx bxs-user-circle fs-2'></i>
+                    </div>
+                    <div class="account">
+                        <div class="text">
+                            <div class="name">Jack</div>
+                            <div class="role">Administrator Basys</div>
+                        </div>
+                        <i class='bx bxs-user-circle fs-2'></i>
+                    </div>
+                    <div class="detail-account">
+                        <div class="header">
+                            <i class='bx bxs-user-circle fs-2'></i>
+                            <div class="text">
+                                <div class="name">Jack</div>
+                                <div class="role">Administrator Basys</div>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <a href="">Ubah Password</a>
+                            <a href="">Konfigurasi Email</a>
+                            <a href="">Sign Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="backdrop" class="">
+        <button class="hideBar"></button>
+    </div>
+    <div class="sidebar close">
+        <img src="img/bg-sidebar.jpg" class="bg-sidebar">
+        <ul class="nav-links">
+            <li class="nav-menu menu-link">
+                <a href="#">
+                    <div class="nav-icon">
+                        <i class='bx bxs-pie-chart-alt-2'></i>
+                    </div>
+                    <span class="link_name">Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-menu menu-link">
+                <a href="#">
+                    <div class="nav-icon">
+                        <i class='bx bx-table'></i>
+                    </div>
+                    <span class="link_name">Table</span>
+                </a>
+            </li>
+            <li class="nav-menu menu-down">
+                <div class="arrow-link">
+                    <a href="#">
+                        <div class="nav-icon">
+                            <i class='bx bxs-layer'></i>
+                        </div>
+                        <div class="nav-name">
+                            <div class="link_name">Category</div>
+                            <i class='bx bxs-chevron-down arrow'></i>
+                        </div>
+                    </a>
+                </div>
+                <ul class="submenu">
+                    <li class="submenu-link">
+                        <a href="#"> Lorem ipsum dolor sit amet.</a>
+                    </li>
+                    <li class="submenu-link">
+                        <a href="#"> Lorem ipsum.</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-menu menu-down">
+                <div class="arrow-link">
+                    <a href="#">
+                        <div class="nav-icon">
+                            <i class='bx bxs-book'></i>
+                        </div>
+                        <div class="nav-name">
+                            <div class="link_name">Report</div>
+                            <i class='bx bxs-chevron-down arrow'></i>
+                        </div>
+                    </a>
+                </div>
+                <ul class="submenu">
+                    <li class="submenu-link">
+                        <a href="#"> Lorem ipsum dolor sit amet.</a>
+                    </li>
+                    <li class="submenu-link">
+                        <a href="#"> Lorem ipsum.</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <section class="content">
+        <div class="row">
+            <div class="col-12">
+                <div class="containerHead">
+                    <div class="title-tbl">Data Karyawan</div>
+                    <div class="containerRight">
+                        <div class="relative">
+                            <input type="text" data-kt-filter="search" class="form-control searchInput" id="tableSearch" placeholder="Cari..." />
+                            <i class='bx bx-search-alt'></i>
+                        </div>
+                        <div class="justify-start gap-3">
+                            <button type="button" class="btn-round" data-bs-toggle="modal" data-bs-target="#myModal">
+                                <i class='bx bx-plus fs-6'></i>
+                                Tambah
+                            </button>
+                            <button type="button" class="btn-circle btnRefresh">
+                                <i class='bx bx-refresh fs-5'></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="containerTable">
+                    <table class="table" id="DTtable">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nama</th>
+                                <th>NIK</th>
+                                <th>Alamat</th>
+                                <th>No HP</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Alex</td>
+                                <td>32111323928293</td>
+                                <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, quidem?</td>
+                                <td>0898756576</td>
+                                <td>
+                                    <div class="dropdown btn-act">
+                                        <button type="button" class="btn-circle-sm" data-bs-toggle="dropdown">
+                                            <i class='bx bx-cog fs-6'></i>
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <button class="dropdown-item">
+                                                <i class='bx bx-info-circle'></i>Detail
+                                            </button>
+                                            <button class="dropdown-item">
+                                                <i class='bx bxs-edit'></i>Edit
+                                            </button>
+                                            <button class="dropdown-item">
+                                                <i class='bx bx-trash'></i>Delete
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- MODAL -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="title">
+                        <div class="modal-title">Modal Title</div>
+                        <div class="modal-subtitle">Modal Subtitle</div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                        <i class="fa-duotone fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="label-form">Name</div>
+                            <input type="text" class="form-control mb-4" placeholder="Input name...">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="label-form">NIK</div>
+                            <input type="text" class="form-control mb-4" placeholder="Input nik...">
+                        </div>
+                        <div class="col-12">
+                            <div class="title mb-3">Floating Input</div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="floating-label-content">
+                                <input type="text" class="form-control borderInput floating-input" name="" id="norek" placeholder=" ">
+                                <label class="floating-label" for="norek">No Rek</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="floating-label-content">
+                                <input type="text" class="form-control borderInput floating-input" name="" id="telp" placeholder=" ">
+                                <label class="floating-label" for="telp">No Telp</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="floating-label-content">
+                                <textarea class="form-control borderInput floating-input" name="" id="address" placeholder=" "></textarea>
+                                <label class="floating-label" for="address">Address</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="modal-action">
+                                <button type="button" data-bs-dismiss="modal" class="btn-round-lg bg-silver"><i class="bx bx-block fs-5"></i>Cancel</button>
+                                <button type="button" class="btn-round-lg bg-blue"><i class="bx bx-download fs-5"></i>Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/datatables/dt.js"></script>
+    <script src="js/bootstrap-5.3.2.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#DTtable').DataTable({
+                aLengthMenu: [
+                    [5, 10, 25, 50, -1],
+                    [5, 10, 25, 50, "All"]
+                ],
+                processing: true,
+                pageLength: 5,
+                responsive: true,
+                bInfo: true,
+                language: {
+                    'lengthMenu': 'Sort _MENU_',
+                }
+            });
+        });
+    </script>
+</body>
+</html>

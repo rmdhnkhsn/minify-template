@@ -2,7 +2,7 @@
     --dt-row-selected: 13, 110, 253;
     --dt-row-selected-text: 255, 255, 255;
     --dt-row-selected-link: 9, 10, 11;
-  }
+}
   table.dataTable td.dt-control:before {
     height: 1em;
     width: 1em;
@@ -202,8 +202,9 @@
   }
   table.dataTable thead th,
   table.dataTable tfoot th {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
+    color: #304F82;
   }
   table.dataTable tbody td:first-child,
   table.dataTable thead th:first-child {
@@ -216,7 +217,7 @@
   table.dataTable thead th,
   table.dataTable thead td {
     padding: 10px;
-    background: #ebebeb;
+    background: #f3f3f5;
   }
   table.dataTable thead th:active,
   table.dataTable thead td:active {
@@ -228,7 +229,7 @@
     border-top: 1px solid rgba(0, 0, 0, 0.3);
   }
   table.dataTable tbody tr {
-    font-size: 14px;
+    font-size: 12px;
     background-color: transparent;
     border-bottom: 1px solid #000;
   }
@@ -327,8 +328,18 @@
     border-radius: 50%;
     cursor: pointer;
   }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .pagination .paginate_button.page-item.active {
     background: #004DA5;
+  }
+  .dataTables_wrapper .dataTables_paginate .paginate_button .page-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .dataTables_wrapper .dataTables_paginate .paginate_button a,
   .dataTables_wrapper .dataTables_paginate .paginate_button i {
@@ -374,10 +385,10 @@
   .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody {
     -webkit-overflow-scrolling: touch;
   }
-.containerTable {
+/* .containerTable {
     overflow-y: hidden;
     overflow-x: hidden;
-}
+} */
 .containerTable::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -394,6 +405,9 @@
 .dataTables_filter {
   display: none;
 }
+.btn-act {
+  margin: -6px 0;
+}
 
 @media screen and (max-width: 767px) {
   .dataTables_wrapper .dataTables_info,
@@ -406,6 +420,7 @@
   }
   .containerTable {
       overflow-x: scroll;
+      overflow-y: hidden;
   }
 }
 @media screen and (max-width: 640px) {

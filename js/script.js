@@ -1,18 +1,19 @@
 
 let sidebar = document.querySelector(".sidebar");
-let sidebarBtn = document.querySelector(".nav-toggle .fa-bars");
 let backdrop = document.querySelector("#backdrop");
+let sidebarBtn = document.querySelector(".nav-toggle i");
+
 sidebarBtn.addEventListener("click", ()=>{
   sidebar.classList.toggle("close");
-  sidebarBtn.classList.toggle("fa-bars-staggered");
+  sidebarBtn.classList.toggle("bx-menu-alt-left");
   backdrop.classList.toggle("sidebar-backdrop");
 });
 
 $(".hideBar").on("click", function(){
   $(".sidebar").addClass("close");
   $("#backdrop").removeClass("sidebar-backdrop");
-  $(".nav-toggle i").removeClass("fa-bars-staggered");
-  $(".nav-toggle i").addClass("fa-bars");
+  $(".nav-toggle i").removeClass("bx-menu-alt-left");
+  $(".nav-toggle i").addClass("bx-menu");
 });
 
 
